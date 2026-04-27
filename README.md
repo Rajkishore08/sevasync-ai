@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="50" height="50">
+  <br>
+  <h1>SevaSync AI</h1>
+  <p><b>An Autonomous, AI-Driven Disaster Triage & Volunteer Matching Platform</b></p>
+  <p><i>Built for the Google Solution Challenge 2026</i></p>
+  
+  <a href="https://sevasync-ai-powered-help.web.app"><strong>View Live Demo</strong></a>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br>
 
-Currently, two official plugins are available:
+## 🌍 The Problem
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+During natural disasters, crises, or in underserved communities, data regarding immediate human needs is overwhelmingly scattered and unstructured. NGOs and emergency responders struggle to manually triage thousands of incoming reports, leading to severely delayed responses and inefficient allocation of life-saving resources. When every second counts, manual data processing costs lives.
 
-## React Compiler
+## 💡 The Solution
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**SevaSync AI** acts as an autonomous command center. It bridges the gap between critical community needs and the volunteers ready to help. By leveraging state-of-the-art Google AI, SevaSync replaces manual triage with instant, intelligent, and automated disaster response.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Google Technologies Under the Hood
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+SevaSync AI was purposefully engineered utilizing the Google ecosystem to ensure scale, speed, and intelligence.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🧠 Google Gemini API (Gemini 2.5 Flash)
+- **Live Needs Triage**: The moment a community need is reported in plain, unstructured text, the Gemini SDK instantly parses the context, categorizes the emergency, and assigns a strict **Priority Score (1-100)** based on urgency and lives affected.
+- **Smart Volunteer Matching**: Gemini cross-references the specific skills required for an emergency (e.g., medical expertise, structural repair) with our live database of volunteers to generate instant deployment plans.
+- **Structured JSON Schemas**: We utilize Gemini's strict `responseSchema` capabilities to ensure the AI's output is perfectly structured for our database, eliminating hallucinations and parsing errors.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔥 Firebase Ecosystem
+- **Firestore (Real-time Database)**: Acts as our Global Command Center. The moment Gemini analyzes a need, it is pushed to Firestore, which instantly synchronizes across all active dashboards globally via `onSnapshot` listeners.
+- **Firebase Authentication**: Secures the platform using **Google Sign-In**. Only authenticated NGOs and administrators can access the Command Center to view sensitive triage data.
+- **Firebase Hosting**: The entire React application is deployed on Firebase Hosting for blazing-fast, secure, and globally distributed access.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Core Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Interactive Platform Overview**: A stunning glassmorphic walkthrough explaining the platform's social impact to first-time users.
+2. **Real-Time Dashboard**: Live metrics tracking open needs, critical emergencies, and active volunteers.
+3. **AI Needs Reporting**: A natural language input system where users describe a crisis, and the AI handles the data structuring.
+4. **Autonomous Matching**: 1-click intelligent assignment of volunteers to the most critical tasks based on AI reasoning.
+5. **Premium UI/UX**: Custom-built CSS glassmorphism, animated auroras (WebGL), and responsive design.
+
+---
+
+## 🛠️ Local Development Setup
+
+To run SevaSync AI locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Rajkishore08/sevasync-ai.git
+   cd sevasync-ai
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables:**
+   You need a Google Gemini API Key. Create a `.env` file in the root directory:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+## 👥 Impact
+
+By utilizing Google's Gemini AI to automate the triage process, SevaSync AI reduces response formulation times from hours to milliseconds. This ensures that in the wake of a disaster, aid is dispatched intelligently, efficiently, and to the people who need it most.
