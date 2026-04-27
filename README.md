@@ -13,8 +13,8 @@
 <br>
 
 <div align="center">
-  <!-- Place your dashboard screenshot here and name it screenshot.png in the root or update the src path -->
-  <img src="screenshot.png" alt="SevaSync AI Dashboard Screenshot" width="800" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <!-- Platform Dashboard Screenshot -->
+  <img src="public/screenshot.png" alt="SevaSync AI Dashboard Screenshot" width="800" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
   <p><i>Platform Interface Overview</i></p>
 </div>
 
