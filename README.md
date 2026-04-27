@@ -5,7 +5,17 @@
   <p><b>An Autonomous, AI-Driven Disaster Triage & Volunteer Matching Platform</b></p>
   <p><i>Built for the Google Solution Challenge 2026</i></p>
   
-  <a href="https://sevasync-ai-powered-help.web.app"><strong>View Live Demo</strong></a>
+  [![Deployed on Firebase](https://img.shields.io/badge/Deployed%20on-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://sevasync-ai-powered-help.web.app)
+  <br><br>
+  <a href="https://sevasync-ai-powered-help.web.app"><strong>🚀 View Live Platform Demo</strong></a>
+</div>
+
+<br>
+
+<div align="center">
+  <!-- Place your dashboard screenshot here and name it screenshot.png in the root or update the src path -->
+  <img src="screenshot.png" alt="SevaSync AI Dashboard Screenshot" width="800" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  <p><i>Platform Interface Overview</i></p>
 </div>
 
 <br>
@@ -71,6 +81,11 @@ To run SevaSync AI locally:
    ```bash
    npm run dev
    ```
+
+## 🔗 Deployment
+
+This application is continuously deployed to Firebase Hosting. 
+You can access the live production build at: **[https://sevasync-ai-powered-help.web.app](https://sevasync-ai-powered-help.web.app)**
 
 ## 👥 Impact
 
